@@ -1,0 +1,12 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "repository": "git@github.com:slavdevelop/portfolio.git",
+  "author": "Slavi Shtipkov <development@shtipkov.com>",
+  "license": "MIT"
+}
