@@ -1,7 +1,10 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "main": "index.js",
+  "scripts": {
+    "dev:website": "yarn workspace website develop",
+    "dev": "yarn dev:website"
+  },
   "private": true,
   "workspaces": [
     "packages/*"
