@@ -1,14 +1,16 @@
 import React from 'react';
 
 import Navbar from './navbar';
+import { Button } from './button';
 
-import './layout.css';
+import '../sass/layout.scss';
 
 const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
       <main>{children}</main>
+      <Button>Styled btn</Button>
     </>
   );
 };
