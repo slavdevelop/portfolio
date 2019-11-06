@@ -1,9 +1,11 @@
 import React from 'react';
 
+import Layout from '../components/layout';
+
 const Index = () => (
-  <div>
-    <h1>Index Page</h1>
-  </div>
+  <Layout>
+    <h1>Mara wa</h1>
+  </Layout>
 );
 
 export default Index;
