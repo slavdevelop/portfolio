@@ -1,9 +1,10 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "scripts": {
-    "dev:website": "yarn workspace website develop",
-    "dev": "yarn dev:website"
+    "dev:website": "yarn workspace @portfolio/website develop",
+    "dev:desginsystem": "yarn workspace @portfolio/design-system storybook",
+    "dev": "concurrently  --kill-others-on-fail  \"yarn dev:website\"  \"yarn dev:desginsystem\""
   },
   "private": true,
   "workspaces": [
@@ -11,5 +12,8 @@
   ],
   "repository": "git@github.com:slavdevelop/portfolio.git",
   "author": "Slavi Shtipkov <development@shtipkov.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^5.0.0"
+  }
 }
