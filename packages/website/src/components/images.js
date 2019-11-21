@@ -7,14 +7,14 @@ import img from '../images/image-3.jpg';
 
 const getImages = graphql`
   {
-    fixed: file(relativePath: { eq: "image-1.jpeg" }) {
+    fluid: file(relativePath: { eq: "image-1.jpg" }) {
       childImageSharp {
-        fixed(width: 200, grayscale: true) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    fluid: file(relativePath: { eq: "image-2.jpeg" }) {
+    fluid: file(relativePath: { eq: "image-2.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -31,17 +31,12 @@ const Images = () => {
   return (
     <Wrapper>
       <article>
-        <h3>basic image</h3>
-        <img src={img} className="basic" />
+        <h3>Fluid image/svg</h3>
+        <Image fluid={data.fixed.childImageSharp.fluid} />
         <p>Contenttt</p>
       </article>
       <article>
-        <h3>fixed image/blur</h3>
-        <Image fixed={data.fixed.childImageSharp.fixed} />
-        <p>Contenttt</p>
-      </article>
-      <article>
-        <h3>fluid image/svg</h3>
+        <h3>Fluid image/svg</h3>
         <Image fluid={data.fluid.childImageSharp.fluid} />
         <p>Contenttt</p>
       </article>
