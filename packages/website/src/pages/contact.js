@@ -7,6 +7,7 @@ const ContactPage = () => {
   return (
     <Layout>
       <Contact />
+      <p>Social Links Section</p>
     </Layout>
   );
 };

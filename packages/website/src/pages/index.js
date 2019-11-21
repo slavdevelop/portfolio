@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 
 const Index = () => (
   <Layout>
-    <h1>Mara wa</h1>
+    <h1>Slavi Shtipkov</h1>
   </Layout>
 );
 
